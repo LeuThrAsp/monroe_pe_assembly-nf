@@ -6,7 +6,7 @@
 
 //Author: Kevin Libuit
 
-//eMail: kevin.libuit@dgs.virginia.gov
+//DSL2 adjustment: Lynn Dotrang
 
 nextflow.enable.dsl = 2
 
@@ -62,16 +62,9 @@ workflow monroe_pe_assembly {
   //MODULE: assembly_results; moved to main.nf
   //assembly_results(samtools.out.alignment_qc.collect(),pangolin_typing.out.pangolin_lineages.collect())
 
-  //there are collect steps to do this part
 
-    //file(cg_pipeline_results) from alignment_qc.collect()
-
-    //file(pangolin_lineage) from pangolin_lineages.collect()
   emit:
 
   ch_samtools_cov = samtools.out.alignment_qc
   ch_pangolin_lineage = pangolin_typing.out.pangolin_lineages
 }
-
-
-//MODULE: assembly_results

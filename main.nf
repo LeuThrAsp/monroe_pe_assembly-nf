@@ -6,7 +6,7 @@
 
 //Author: Kevin Libuit
 
-//eMail: kevin.libuit@dgs.virginia.gov
+//DSL2 adjustment: Lynn Dotrang
 
 nextflow.enable.dsl = 2
 
